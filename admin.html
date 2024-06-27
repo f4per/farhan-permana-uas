@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Admin</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-jQ3JQ7nqBRx4MwR5fD8sqFQ/cXqU/0i1F5Qemw4LVsBhZKqypYvPtMfmXUDBvJ5fK4ODZPMuFWn7evSoJDf5Eg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style>
+      .custom-width {
+        max-width: 1400px; /* atau lebar yang Anda inginkan */
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 justify-between">
+    <!-- Navbar -->
+    <nav class="flex justify-between items-center bg-white p-4 shadow h-24">
+      <!-- Logo -->
+      <div class="text-blue-800">
+        <span class="font-bold">SHOW ROOM</span>
+      </div>
+    </nav>
+
+    <!-- Sidebar -->
+    <div class="flex flex-row gap-6 h-screen">
+      <!-- Sidebar -->
+      <div class="w-48 bg-white shadow">
+        <div class="space-y-2 text-left">
+          <div class="text-left text-black">
+            <ul class="px-4">
+              <li class="mb-3">
+                <a
+                  href="admin.html"
+                  class="font-semibold flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-900 group text-center"
+                >
+                  <svg
+                    class="flex-shrink-0 w-8 h-8 text-blue-800 transition duration-75 dark:text-white group-hover:text-white dark:group-hover:text-white mr-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 22 21"
+                  >
+                    <path
+                      d="M16.975 11H10V4.025a1 1 0 0 0-1.066-.998 8.5 8.5 0 1 0 9.039 9.039.999.999 0 0 0-1-1.066h.002Z"
+                    />
+                    <path
+                      d="M12.5 0c-.157 0-.311.01-.565.027A1 1 0 0 0 11 1.02V10h8.975a1 1 0 0 0 1-.935c.013-.188.028-.374.028-.565A8.51 8.51 0 0 0 12.5 0Z"
+                    />
+                  </svg>
+                  <span class="hover:text-white">Dashboard</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="admin.html"
+                  class="font-semibold flex items-center justify-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-blue-900 group text-center"
+                >
+                  <svg
+                    class="flex-shrink-0 w-8 h-8 text-blue-800 transition duration-75 dark:text-white group-hover:text-white dark:group-hover:text-white mr-1"
+                    aria-hidden="true"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      d="M5 5V.13a2.96 2.96 0 0 0-1.293.749L.879 3.707A2.96 2.96 0 0 0 .13 5H5Z"
+                    />
+                    <path
+                      d="M6.737 11.061a2.961 2.961 0 0 1 .81-1.515l6.117-6.116A4.839 4.839 0 0 1 16 2.141V2a1.97 1.97 0 0 0-1.933-2H7v5a2 2 0 0 1-2 2H0v11a1.969 1.969 0 0 0 1.933 2h12.134A1.97 1.97 0 0 0 16 18v-3.093l-1.546 1.546c-.413.413-.94.695-1.513.81l-3.4.679a2.947 2.947 0 0 1-1.85-.227 2.96 2.96 0 0 1-1.635-3.257l.681-3.397Z"
+                    />
+                    <path
+                      d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"
+                    />
+                    <path
+                      d="M8.961 16a.93.93 0 0 0 .189-.019l3.4-.679a.961.961 0 0 0 .49-.263l6.118-6.117a2.884 2.884 0 0 0-4.079-4.078l-6.117 6.117a.96.96 0 0 0-.263.491l-.679 3.4A.961.961 0 0 0 8.961 16Zm7.477-9.8a.958.958 0 0 1 .68-.281.961.961 0 0 1 .682 1.644l-.315.315-1.36-1.36.313-.318Zm-5.911 5.911 4.236-4.236 1.359 1.359-4.236 4.237-1.7.339.341-1.699Z"
+                    />
+                  </svg>
+                  <span class="flex-1 ms-3 whitespace-nowrap hover:text-white"
+                    >Category</span
+                  >
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 md:grid-cols-3  w-full gap-7">
+        <!-- Form Input Data Motor -->
+        <div class="flex flex-col gap-3">
+          <form
+            id="motorForm"
+            class="bg-white p-6 rounded-2xl shadow-lg mt-6 max-w-4xl mx-4 "
+            enctype="multipart/form-data"
+          >
+            <input type="hidden" id="id" />
+            <div class="grid grid-cols-12">
+              <div class="col-start-1 col-span-9 w-72">
+                <input
+                  type="text"
+                  class="form-input px-4 py-2 border border-gray-400 rounded-2xl shadow-sm w-full focus:outline-none"
+                  placeholder="Nama Motor"
+                  id="nama"
+                  name="nama"
+                  required
+                />
+              </div>
+
+              <div class="col-start-10 col-span-3 w-26">
+                <select
+                  class="form-select px-4 py-2 border border-gray-400 rounded-2xl shadow-sm w-full focus:outline-none"
+                  id="kategori"
+                  name="kategori"
+                  required
+                ></select>
+              </div>
+            </div>
+
+            <div class="flex flex-row gap-6 col-span-1 mt-5">
+              <input
+                type="number"
+                class="form-input px-4 py-2 border border-gray-400 rounded-2xl shadow-sm w-full focus:outline-none"
+                placeholder="Harga"
+                id="harga"
+                name="harga"
+                required
+              />
+            </div>
+
+            <div class="col-span-full mt-6">
+              <label
+                for="cover-photo"
+                class="block text-sm font-semibold leading-6 text-gray-900"
+                >Cover photo</label
+              >
+              <div
+                class="mt-2 flex justify-center rounded-2xl border border-gray-400 border-gray-900/25 px-6 py-10"
+              >
+                <div class="text-center">
+                  <svg
+                    class="mx-auto h-12 w-12 text-gray-300"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.5 6a2.25 2.25 0 012.25-2.25h16.5A2.25 2.25 0 0122.5 6v12a2.25 2.25 0 01-2.25 2.25H3.75A2.25 2.25 0 011.5 18V6zM3 16.06V18c0 .414.336.75.75.75h16.5A.75.75 0 0021 18v-1.94l-2.69-2.689a1.5 1.5 0 00-2.12 0l-.88.879.97.97a.75.75 0 11-1.06 1.06l-5.16-5.159a1.5 1.5 0 00-2.12 0L3 16.061zm10.125-7.81a1.125 1.125 0 112.25 0 1.125 1.125 0 01-2.25 0z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  <div class="mt-4 flex text-sm leading-6 text-gray-600">
+                    <label
+                      for="foto"
+                      class="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none hover:text-indigo-500"
+                    >
+                      <span>Upload a file</span>
+                      <input
+                        id="foto"
+                        name="foto"
+                        type="file"
+                        class="form-input sr-only"
+                      />
+                    </label>
+                    <p class="pl-1">or drag and drop</p>
+                  </div>
+                  <p class="text-xs leading-5 text-gray-600">
+                    PNG, JPG, GIF up to 10MB
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-span-2 mt-6">
+              <textarea
+                class="form-input px-4 py-2 border border-gray-400 rounded-2xl shadow-sm w-full focus:outline-none"
+                placeholder="Deskripsi"
+                id="deskripsi"
+                name="deskripsi"
+                required
+              ></textarea>
+            </div>
+
+            <div class="col-span-2 flex flex-row gap-6 justify-end mt-6">
+              <button
+                type="button"
+                class="text-sm font-semibold leading-6 text-gray-900"
+              >
+                Cancel
+              </button>
+              <button
+                type="button"
+                class="bg-blue-800 text-white px-4 py-2 rounded-2xl shadow hover:bg-blue-900 w-24"
+                onclick="SaveMotor()"
+                id="save"
+              >
+                Save
+              </button>
+            </div>
+          </form>
+
+          <div class="bg-red-600 rounded-2xl mt-6 mx-4">
+            <table class="min-w-full bg-white overflow-hidden shadow-lg table-auto justify-center text-md font-bold rounded-2xl">
+              <thead id="">
+                <tr class="bg-blue-800 text-white">
+                  <th class="px-2 py-2 text-center">No</th>
+                  <th class="px-4 py-2 text-center">Kategori</th>
+                  <th class="px-4 py-2">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="categoryTableBody"></tbody>
+            </table>
+          </div>
+          
+        </div>
+
+        <div class="h-screen mt-6">
+          <div class="flex flex-col gap-10">
+            <table
+              class="min-w-full bg-white rounded-2xl overflow-hidden shadow-lg table-auto justify-center text-md font-bold"
+            >
+              <thead>
+                <tr class="bg-blue-800 text-white">
+                  <th class="px-8 py-9">No</th>
+                  <th class="px-24 py-6">Nama</th>
+
+                  <th class="px-14 py-6">Kategori</th>
+
+                  <th class="px-20 py-4">Harga</th>
+                  <th class="px-28 py-4">Aksi</th>
+                </tr>
+              </thead>
+              <tbody id="motorTableBody"></tbody>
+            </table>
+
+            <form
+              id="categoryForm"
+              class="bg-white rounded-2xl shadow-md h-auto md:max-h-24"
+              enctype="multipart/form-data"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-7">
+                <div class="col-span-1 flex items-center">
+                  <input
+                    type="text"
+                    placeholder="Category"
+                    id="namaKategori"
+                    name="namaKategori"
+                    class="form-input px-4 py-2 border border-gray-400 rounded-2xl shadow-sm w-full focus:outline-none"
+                    required
+                  />
+                </div>
+                <div class="col-span-1 md:col-span-1 flex justify-end space-x-6 shadow-lg">
+                  <button
+                    type="button"
+                    class="text-sm font-semibold leading-6 text-gray-900"
+                  >
+                    Cancel
+                  </button>
+                
+                  <button
+                    id="trigger"
+                    type="button"
+                    onclick="saveCategory()"
+                    class="bg-blue-800 text-white px-4 py-2 rounded-2xl shadow hover:bg-blue-900 w-full md:w-28"
+                  >
+                    Save
+                  </button>
+                </div>
+                
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      const apiUrl = "http://localhost:3000/product";
+      const categoryUrl = "http://localhost:3000/category";
+
+      const GetMotor = async () => {
+        await axios
+          .get(apiUrl)
+          .then((response) => {
+            console.log(response.data);
+            const motors = response.data;
+            let bucket = "";
+            motors.forEach((motor, index) => {
+              bucket += `
+                                    <tr class="font-semibold">
+                                        <td class="border px-8 py-4 justify-center">${
+                                          index + 1
+                                        }</td>
+                                        <td class="border px-4 py-2">${
+                                          motor.nama
+                                        }</td>
+
+                                        <td class="border px-8 py-2 ">${
+                                          motor.kategori
+                                        }</td>
+
+                                        <td class="border px-4 py-2">${new Intl.NumberFormat(
+        "id-ID",
+        { style: "currency", currency: "IDR" }
+      ).format(motor.harga)}</td>
+                                        <td class="border px-8 py-2 justify-center items-center ml-6">
+                                            <button class="bg-yellow-500 text-white px-7 py-1 rounded-lg ml-2 gap-2" type="button" onclick="EditMotor('${
+                                              motor.id
+                                            }')"><i class="fas fa-edit "></i> Edit</button>
+                                            <button class="bg-red-500 text-white px-5 py-1 rounded-lg" type="button" onclick="DeleteMotor('${
+                                              motor.id
+                                            }')"><i class="fas fa-trash"></i> Hapus</button>
+                                        </td>
+                                    </tr>
+                                `;
+            });
+
+            document.getElementById("motorTableBody").innerHTML = bucket;
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+
+      const SaveMotor = async () => {
+        let nama = document.getElementById("nama").value;
+        let foto = document.getElementById("foto").files[0];
+        let kategori = document.getElementById("kategori").value;
+        let harga = document.getElementById("harga").value;
+        let deskripsi = document.getElementById("deskripsi").value;
+
+        let reader = new FileReader();
+        reader.readAsDataURL(foto);
+        reader.onloadend = async () => {
+          let base64foto = reader.result;
+
+          const motorData = {
+            nama: nama,
+            foto: base64foto,
+            kategori: kategori,
+            harga: harga,
+            deskripsi: deskripsi,
+          };
+
+          await axios
+            .post(apiUrl, motorData)
+            .then((response) => {
+              console.log(response);
+              GetMotor();
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        };
+      };
+
+      const UpdateMotor = async (id) => {
+        let nama = document.getElementById("nama").value;
+        let foto = document.getElementById("foto").files[0];
+        let kategori = document.getElementById("kategori").value;
+        let harga = document.getElementById("harga").value;
+        let deskripsi = document.getElementById("deskripsi").value;
+
+        const motorData = {
+          nama: nama,
+          kategori: kategori,
+          harga: harga,
+          deskripsi: deskripsi,
+        };
+
+        if (foto) {
+          let reader = new FileReader();
+          reader.readAsDataURL(foto);
+          reader.onloadend = async () => {
+            let base64foto = reader.result;
+            motorData.foto = base64foto;
+            await axios
+              .put(`${apiUrl}/${id}`, motorData)
+              .then((response) => {
+                console.log(response);
+                GetMotor();
+                // Reset form after successful update
+                document.getElementById("motorForm").reset();
+                document.getElementById("save").innerText = "Simpan";
+                document.getElementById("save").onclick = SaveMotor;
+              })
+              .catch((error) => {
+                alert(error.message);
+              });
+          };
+        } else {
+          await axios
+            .put(`${apiUrl}/${id}`, motorData)
+            .then((response) => {
+              console.log(response);
+              GetMotor();
+              // Reset form after successful update
+              document.getElementById("motorForm").reset();
+              document.getElementById("save").innerText = "Simpan";
+              document.getElementById("save").onclick = SaveMotor;
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        }
+      };
+
+      const DeleteMotor = async (id) => {
+        const confirmVal = confirm("Apakah data akan dihapus?");
+        if (confirmVal) {
+          await axios
+            .delete(`${apiUrl}/${id}`)
+            .then((response) => {
+              console.log(response);
+              GetMotor();
+            })
+            .catch((error) => {
+              alert(error.message);
+            });
+        }
+      };
+
+      const EditMotor = async (id) => {
+        await axios
+          .get(`${apiUrl}/${id}`)
+          .then((response) => {
+            const motor = response.data;
+            document.getElementById("id").value = motor.id;
+            document.getElementById("nama").value = motor.nama;
+            document.getElementById("kategori").value = motor.kategori;
+            // foto tidak perlu diisi dengan nilai dari response
+            document.getElementById("harga").value = motor.harga;
+            document.getElementById("deskripsi").value = motor.deskripsi;
+            document.getElementById("save").innerText = "Update";
+            const updateButton = document.getElementById("save"); 
+            updateButton.onclick = () => UpdateMotor(motor.id);
+            console.log(response);
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+
+      const getCategory = async () => {
+        await axios
+          .get(categoryUrl)
+          .then((response) => {
+            console.log(response.data);
+            const categories = response.data;
+            let bucket = "";
+            categories.forEach((category) => {
+              bucket += `
+                                    <option value="${category.name}">${category.name}</option>
+                                `;
+            });
+            document.getElementById("kategori").innerHTML = bucket;
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+      const categoryData = async () => {
+        await axios
+          .get(categoryUrl)
+          .then((response) => {
+            console.log(response.data);
+            const categories = response.data;
+            let bucket = "";
+            categories.forEach((category, index) => {
+              bucket += `
+                                    <tr class="font-semibold">
+                                        <td class="border px-4 py-2 justify-center">${
+                                          index + 1
+                                        }</td>
+                                        <td class="border px-10 py-2">${
+                                          category.name
+                                        }</td>
+
+                                        <td class="border px-2 py-2 justify-center items-center gap-4">
+                                            <button class="bg-yellow-500 text-white px-9 py-1 rounded-lg ml-11 " type="button" onclick="EditCategory('${
+                                              category.id
+                                            }')"><i class="fas fa-edit "></i> Edit</button>
+                                            <button class="bg-red-500 text-white px-7 py-1 rounded-lg" type="button" onclick="DeleteCategory('${
+                                              category.id
+                                            }')"><i class="fas fa-trash"></i> Hapus</button>
+                                        </td>
+                                    </tr>
+                                `;
+            });
+            document.getElementById("categoryTableBody").innerHTML = bucket;
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+      categoryData();
+
+      document.addEventListener("DOMContentLoaded", () => {
+        GetMotor();
+        getCategory();
+      });
+
+      const saveCategory = async () => {
+        let nama = document.getElementById("namaKategori").value;
+
+        const kategoriData = {
+          name: nama,
+        };
+
+        await axios
+          .post(categoryUrl, kategoriData)
+          .then((response) => {
+            console.log(response);
+            // Uncomment and implement this line if you have a function to fetch categories
+            // getc();
+          })
+          .catch((error) => {
+            alert(error.message);
+          });
+      };
+
+      const EditCategory = async (id) => {
+        try {
+          const response = await axios.get(`${categoryUrl}/${id}`);
+          const category = response.data;
+          document.getElementById("namaKategori").value = category.name;
+          document.getElementById("trigger").innerText = "Update";
+          document
+            .getElementById("trigger")
+            .setAttribute("onclick", `UpdateCategory('${id}')`);
+        } catch (error) {
+          console.error(error);
+          alert("Failed to fetch category data for editing.");
+        }
+      };
+
+      const UpdateCategory = async (id) => {
+        const nameVal = document.getElementById("namaKategori").value;
+        const data = {
+          name: nameVal,
+        };
+
+        try {
+          const response = await axios.patch(`${categoryUrl}/${id}`, data);
+          console.log(response);
+
+          document.getElementById("namaKategori").value = "";
+          document.getElementById("trigger").innerText = "Simpan"; // Ubah dari "save" menjadi "Simpan"
+          document
+            .getElementById("trigger")
+            .setAttribute("onclick", "SaveCategory()"); // Ubah menjadi string "SaveCategory()"
+
+          GetCategories(); // Panggil fungsi GetCategories() setelah berhasil update
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      const DeleteCategory = async (id) => {
+        const confirmed = confirm("Apakah anda yakin akan menghapus?");
+        if (confirmed) {
+          try {
+            const response = await axios.delete(
+              `http://localhost:3000/category/${id}`
+            );
+            console.log(response);
+            GetCategories();
+          } catch (error) {}
+        }
+      };
+    </script>
+  </body>
+</html>
